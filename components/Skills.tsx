@@ -1,28 +1,29 @@
 const skills = [
     'React.js',
     'Next.js',
-    'TypeScript',
     'NestJS',
+    'Node.js',
+    'GraphQL',
+    'TypeScript',
     'JavaScript',
     'Redux',
     'Tailwind CSS',
-    'Node.js',
+    'REST APIs',
     'System Design',
-    'Frontend Architecture',
-    'GraphQL',
+    'Architecture',
   ]
   
   export default function Skills() {
     return (
-      <section className="py-28 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-10">Skills</h2>
+      <section id="skills" className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12">Skills</h2>
   
           <div className="flex flex-wrap gap-4">
             {skills.map((skill) => (
               <div
                 key={skill}
-                className="px-5 py-3 border border-zinc-700 rounded-xl bg-zinc-900"
+                className="px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400 transition"
               >
                 {skill}
               </div>
