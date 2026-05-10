@@ -1,128 +1,142 @@
-'use client'
-
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
-
 const projects = [
   {
-    title: 'iTrip.pro',
+    num: "01",
+    tag: "Travel Tech",
+    title: "iTrip.pro",
     description:
-      'Modern travel and trip management platform focused on scalable architecture, responsive UI, premium user experience and high-performance frontend engineering.',
-
-    image: '/itrip.png',
-
-    tech: [
-      'Next.js',
-      'React.js',
-      'TypeScript',
-      'Tailwind CSS',
-    ],
-
-    link: 'https://itrip.pro',
+      "A modern travel and trip management platform focused on scalable architecture, responsive UI, premium user experience, and high-performance frontend engineering.",
+    stack: ["Next.js", "React.js", "TypeScript", "Tailwind CSS"],
+    url: "https://itrip.pro",
+    urlLabel: "Visit itrip.pro ↗",
   },
-
   {
-    title: 'TalentXO',
+    num: "02",
+    tag: "HR Tech",
+    title: "TalentXO",
     description:
-      'HR-tech and recruitment platform enabling companies, recruiters and candidates to streamline hiring workflows, job discovery and talent acquisition.',
-
-    image: '/talentxo.png',
-
-    tech: [
-      'React.js',
-      'Next.js',
-      'GraphQL',
-      'TypeScript',
-      'Enterprise UI',
-    ],
-
-    link: 'https://talentxo.com',
+      "An enterprise HR-tech and recruitment platform enabling companies, recruiters, and candidates to streamline hiring workflows, job discovery, and talent acquisition at scale.",
+    stack: ["React.js", "Next.js", "GraphQL", "TypeScript", "Enterprise UI"],
+    url: "https://talentxo.com",
+    urlLabel: "Visit talentxo.com ↗",
   },
-]
+];
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-32 px-6 relative overflow-hidden"
+      style={{ padding: "6rem 5%", background: "var(--navy-2)", position: "relative" }}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.15),transparent_35%)]" />
+      <p className="section-label">Portfolio</p>
+      <h2 className="section-title">Featured projects</h2>
+      <div className="divider" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-indigo-400 uppercase tracking-[0.2em] text-sm mb-4">
-            Portfolio
-          </p>
-
-          <h2 className="text-5xl font-bold mb-16">
-            Featured Projects
-          </h2>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-10">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15 }}
-              viewport={{ once: true }}
-              className="group"
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "1.5px",
+          background: "var(--border)",
+        }}
+        className="projects-grid"
+      >
+        {projects.map((p) => (
+          <div
+            key={p.num}
+            className="project-card"
+          >
+            {/* Ghost number */}
+            <span
+              style={{
+                position: "absolute",
+                top: "1.5rem",
+                right: "2rem",
+                fontFamily: "var(--font-serif), Georgia, serif",
+                fontSize: "4rem",
+                color: "rgba(201,168,76,0.06)",
+                fontWeight: 400,
+                lineHeight: 1,
+                userSelect: "none",
+              }}
             >
-              <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl hover:border-indigo-500/50 transition-all duration-500 hover:-translate-y-2">
-                
-                <div className="relative h-[280px] overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition duration-700"
-                  />
+              {p.num}
+            </span>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                </div>
+            <span
+              style={{
+                fontSize: "0.68rem",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "var(--gold)",
+                marginBottom: "1rem",
+                display: "block",
+              }}
+            >
+              {p.tag}
+            </span>
 
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-5">
-                    <h3 className="text-3xl font-semibold">
-                      {project.title}
-                    </h3>
+            <h3
+              style={{
+                fontFamily: "var(--font-serif), Georgia, serif",
+                fontSize: "1.6rem",
+                fontWeight: 400,
+                color: "var(--cream)",
+                marginBottom: "0.8rem",
+                lineHeight: 1.3,
+              }}
+            >
+              {p.title}
+            </h3>
 
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition"
-                    >
-                      <ArrowUpRight size={20} />
-                    </a>
-                  </div>
+            <p
+              style={{
+                color: "var(--muted)",
+                fontSize: "0.9rem",
+                lineHeight: 1.75,
+                marginBottom: "1.5rem",
+              }}
+            >
+              {p.description}
+            </p>
 
-                  <p className="text-gray-400 leading-8 mb-8">
-                    {project.description}
-                  </p>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "0.5rem",
+                marginBottom: "1.5rem",
+              }}
+            >
+              {p.stack.map((tech) => (
+                <span
+                  key={tech}
+                  style={{
+                    fontSize: "0.68rem",
+                    fontFamily: "var(--font-mono), monospace",
+                    color: "var(--cream-dim)",
+                    background: "rgba(255,255,255,0.04)",
+                    padding: "3px 10px",
+                    borderRadius: "2px",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
 
-                  <div className="flex flex-wrap gap-3">
-                    {project.tech.map((item) => (
-                      <span
-                        key={item}
-                        className="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            <a
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              {p.urlLabel}
+            </a>
+          </div>
+        ))}
       </div>
+
     </section>
-  )
+  );
 }

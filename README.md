@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rahul Kumar — Portfolio
+
+A premium dark editorial portfolio built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + CSS custom properties
+- **Fonts**: Playfair Display (serif) + DM Sans + DM Mono via Google Fonts
+- **Deployment**: Vercel (recommended)
+
+## Project Structure
+
+```
+portfolio/
+├── app/
+│   ├── layout.tsx       # Root layout, fonts, metadata
+│   ├── page.tsx         # Main page (assembles all sections)
+│   └── globals.css      # Global styles, CSS variables, animations
+├── components/
+│   ├── Navbar.tsx       # Sticky nav with mobile menu
+│   ├── Hero.tsx         # Hero section with profile image + badges
+│   ├── About.tsx        # About section with stats grid
+│   ├── Experience.tsx   # Timeline of work history
+│   ├── Skills.tsx       # Skills grid with progress bars
+│   ├── Projects.tsx     # Featured projects cards
+│   ├── Services.tsx     # Services offered grid
+│   ├── Contact.tsx      # Contact form + social links
+│   └── Footer.tsx       # Footer
+├── public/
+│   ├── profile.jpg      # ← ADD YOUR PHOTO HERE
+│   └── resume.pdf       # ← ADD YOUR RESUME HERE
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+├── postcss.config.js
+└── package.json
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Add your assets
+
+Place the following in the `/public` folder:
+- `profile.jpg` — your profile photo (portrait orientation recommended, ~400×500px)
+- `resume.pdf` — your latest resume
+
+### 3. Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Personal details
+All personal content is in the component files under `/components`. Each file is self-contained and clearly organized:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| File | What to edit |
+|------|-------------|
+| `app/layout.tsx` | Page title, meta description, SEO keywords |
+| `components/Hero.tsx` | Headline, subtitle text |
+| `components/About.tsx` | Bio paragraphs, stat numbers |
+| `components/Experience.tsx` | `experiences` array at the top |
+| `components/Skills.tsx` | `skills` array at the top |
+| `components/Projects.tsx` | `projects` array at the top |
+| `components/Services.tsx` | `services` array at the top |
+| `components/Contact.tsx` | `EMAIL` constant, social links |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Colors (CSS variables in `globals.css`)
 
-## Deploy on Vercel
+```css
+--gold: #c9a84c;        /* Primary accent */
+--gold-light: #e2c97e;  /* Hover state */
+--navy: #0a0f1e;        /* Page background */
+--cream: #f5f0e8;       /* Primary text */
+--muted: #6b7a99;       /* Secondary text */
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install -g vercel
+vercel
+```
+
+Or push to GitHub and connect your repo at [vercel.com](https://vercel.com).
+
+## Contact
+
+- Email: rahul.javascript1@gmail.com
+- LinkedIn: [devmantrarahulkumar](https://www.linkedin.com/in/devmantrarahulkumar/)
+- GitHub: [rahulfrontend1-cmd](https://github.com/rahulfrontend1-cmd)

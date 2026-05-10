@@ -1,35 +1,68 @@
 const skills = [
-    'React.js',
-    'Next.js',
-    'NestJS',
-    'Node.js',
-    'GraphQL',
-    'TypeScript',
-    'JavaScript',
-    'Redux',
-    'Tailwind CSS',
-    'REST APIs',
-    'System Design',
-    'Architecture',
-  ]
-  
-  export default function Skills() {
-    return (
-      <section id="skills" className="py-32 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">Skills</h2>
-  
-          <div className="flex flex-wrap gap-4">
-            {skills.map((skill) => (
+  { icon: "⚛️", name: "React.js", level: "Expert", pct: 95 },
+  { icon: "▲", name: "Next.js", level: "Expert", pct: 92 },
+  { icon: "🔷", name: "TypeScript", level: "Expert", pct: 90 },
+  { icon: "◉", name: "GraphQL", level: "Expert", pct: 88 },
+  { icon: "🟢", name: "Node.js", level: "Advanced", pct: 85 },
+  { icon: "🐈", name: "NestJS", level: "Advanced", pct: 83 },
+  { icon: "🏪", name: "Redux", level: "Advanced", pct: 85 },
+  { icon: "🎨", name: "Tailwind CSS", level: "Advanced", pct: 88 },
+  { icon: "🔁", name: "REST APIs", level: "Expert", pct: 93 },
+  { icon: "🏗️", name: "System Design", level: "Advanced", pct: 80 },
+  { icon: "📦", name: "JavaScript", level: "Expert", pct: 95 },
+  { icon: "🏛️", name: "Architecture", level: "Advanced", pct: 78 },
+];
+
+export default function Skills() {
+  return (
+    <section id="skills" style={{ padding: "6rem 5%", position: "relative" }}>
+      <p className="section-label">Expertise</p>
+      <h2 className="section-title">Technical skills</h2>
+      <div className="divider" />
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          gap: "1px",
+          background: "var(--border)",
+        }}
+        className="skills-grid"
+      >
+        {skills.map((skill) => (
+          <div key={skill.name} className="skill-card">
+            <span style={{ fontSize: "1.5rem", marginBottom: "0.8rem", display: "block" }}>
+              {skill.icon}
+            </span>
+            <p style={{ fontSize: "0.9rem", fontWeight: 400, color: "var(--cream)", marginBottom: "0.3rem" }}>
+              {skill.name}
+            </p>
+            <p style={{ fontSize: "0.7rem", color: "var(--gold-dim)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+              {skill.level}
+            </p>
+            <div
+              style={{
+                height: "2px",
+                background: "var(--navy-4)",
+                marginTop: "0.8rem",
+                borderRadius: "1px",
+                overflow: "hidden",
+              }}
+            >
               <div
-                key={skill}
-                className="px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400 transition"
-              >
-                {skill}
-              </div>
-            ))}
+                className="skill-bar-fill"
+                style={{
+                  height: "100%",
+                  background: "var(--gold)",
+                  borderRadius: "1px",
+                  width: `${skill.pct}%`,
+                }}
+              />
+            </div>
           </div>
-        </div>
-      </section>
-    )
-  }
+        ))}
+      </div>
+
+    </section>
+  );
+}
