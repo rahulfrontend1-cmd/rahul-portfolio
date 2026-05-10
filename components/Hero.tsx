@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -37,7 +38,15 @@ export default function Hero() {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-[320px] h-[320px] rounded-3xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700" />
+            <div className="relative w-[320px] h-[320px] rounded-3xl overflow-hidden border border-gray-700">
+                <Image
+                src="/profile.jpg"
+                alt="Rahul Kumar"
+                fill
+                className="object-cover"
+                priority
+                />
+            </div>
         </div>
       </div>
     </section>
