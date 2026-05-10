@@ -8,15 +8,18 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.name || !form.email || !form.message) return;
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${form.name}`);
-    const body = encodeURIComponent(
-      `Hi Rahul,\n\nMy name is ${form.name} (${form.email}).\n\n${form.message}`
-    );
-    window.open(`mailto:${EMAIL}?subject=${subject}&body=${body}`);
-    setSubmitted(true);
+  
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+  
+    if (res.ok) setSubmitted(true);
   };
+  
 
   const contactLinks = [
     {
