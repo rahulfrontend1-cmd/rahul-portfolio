@@ -22,6 +22,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.rahuljavascript.xyz"),
   title: "Rahul Kumar | Full Stack Developer",
   description:
     "Senior Full Stack Developer with 8+ years building enterprise applications using React.js, Next.js, NestJS, and GraphQL. Open to opportunities in Dubai, UAE, USA, Canada, UK, Germany, Australia, New Zealand and Europe.",
