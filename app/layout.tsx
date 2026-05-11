@@ -72,6 +72,21 @@ export const metadata: Metadata = {
       "Senior Full Stack Developer with 8+ years in React.js, Next.js, NestJS & GraphQL. Open to Dubai, UAE, USA, Canada, UK, Germany, Australia & Europe.",
     images: ["https://www.rahuljavascript.xyz/og-image.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "manifest-icon", url: "/favicon-192x192.png", sizes: "192x192" },
+      { rel: "manifest-icon", url: "/favicon-512x512.png", sizes: "512x512" },
+    ],
+  }
 };
 
 export default function RootLayout({
