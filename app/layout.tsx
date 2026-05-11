@@ -23,6 +23,9 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rahuljavascript.xyz"),
+  verification: {
+    google: "UzRSQfzI-HsWuGRx-faMYI85lrCPsVVPG_3oNZuDxKk",
+  },
   title: "Rahul Kumar | Full Stack Developer",
   description:
     "Senior Full Stack Developer with 8+ years building enterprise applications using React.js, Next.js, NestJS, and GraphQL. Open to opportunities in Dubai, UAE, USA, Canada, UK, Germany, Australia, New Zealand and Europe.",
@@ -52,6 +55,7 @@ export const metadata: Metadata = {
       "Senior Full Stack Developer with 8+ years building enterprise applications using React.js, Next.js, NestJS, and GraphQL. Open to opportunities in Dubai, UAE, USA, Canada, UK, Germany, Australia, New Zealand and Europe.",
     type: "website",
     url: "https://www.rahuljavascript.xyz",
+    
     images: [
       {
         url: "https://www.rahuljavascript.xyz/og-image.jpg",

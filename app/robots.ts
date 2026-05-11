@@ -11,6 +11,10 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "facebookexternalhit",
         allow: "/",
       },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+      },
     ],
     sitemap: "https://www.rahuljavascript.xyz/sitemap.xml",
   };
