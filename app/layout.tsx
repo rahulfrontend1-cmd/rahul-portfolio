@@ -24,22 +24,48 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: "Rahul Kumar | Full Stack Developer",
   description:
-    "Senior Full Stack Developer specializing in React.js, Next.js, NestJS, GraphQL and scalable enterprise applications.",
+    "Senior Full Stack Developer with 8+ years building enterprise applications using React.js, Next.js, NestJS, and GraphQL. Open to opportunities in Dubai, UAE, USA, Canada, UK, Germany, Australia, New Zealand and Europe.",
   keywords: [
     "Full Stack Developer",
-    "React.js",
-    "Next.js",
+    "React.js Developer",
+    "Next.js Developer",
     "NestJS",
     "GraphQL",
     "TypeScript",
-    "Bengaluru",
+    "Senior Developer Dubai",
+    "Full Stack Developer UAE",
+    "Full Stack Developer Dubai",
+    "Software Engineer Dubai",
+    "React Developer UAE",
+    "Full Stack Developer Canada",
+    "Full Stack Developer UK",
+    "Full Stack Developer Germany",
+    "Full Stack Developer Australia",
+    "Enterprise Web Development",
+    "Technical Consultant",
   ],
   authors: [{ name: "Rahul Kumar" }],
   openGraph: {
     title: "Rahul Kumar | Full Stack Developer",
     description:
-      "Senior Full Stack Developer specializing in React.js, Next.js, NestJS, GraphQL and scalable enterprise applications.",
+      "Senior Full Stack Developer with 8+ years building enterprise applications using React.js, Next.js, NestJS, and GraphQL. Open to opportunities in Dubai, UAE, USA, Canada, UK, Germany, Australia, New Zealand and Europe.",
     type: "website",
+    url: "https://www.rahuljavascript.xyz",
+    images: [
+      {
+        url: "https://www.rahuljavascript.xyz/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rahul Kumar | Full Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rahul Kumar | Full Stack Developer",
+    description:
+      "Senior Full Stack Developer with 8+ years in React.js, Next.js, NestJS & GraphQL. Open to Dubai, UAE, USA, Canada, UK, Germany, Australia & Europe.",
+    images: ["https://www.rahuljavascript.xyz/og-image.jpg"],
   },
 };
 

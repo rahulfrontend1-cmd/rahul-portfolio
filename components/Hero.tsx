@@ -33,7 +33,7 @@ export default function Hero() {
       <div style={{ position: "relative", zIndex: 1 }}>
         <p className="fade-up" style={{ fontSize: "0.72rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1.2rem", display: "flex", alignItems: "center", gap: "0.8rem" }}>
           <span style={{ display: "inline-block", width: "32px", height: "1px", background: "var(--gold)" }} />
-          Available for opportunities
+          Available for global opportunities
         </p>
 
         <h1

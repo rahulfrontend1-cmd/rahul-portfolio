@@ -49,8 +49,9 @@ export default function About() {
               enterprise consulting.
             </p>
             <p>
-              Currently based in Bengaluru, open to international opportunities
-              across the USA, Canada, UK, Australia, and Germany.
+              Currently based in Bengaluru and actively seeking international
+              opportunities. Open to relocating to Dubai & UAE, USA, Canada, UK,
+              Germany, Australia, New Zealand, and European countries.
             </p>
           </div>
         </div>

@@ -19,6 +19,16 @@ const projects = [
     url: "https://talentxo.com",
     urlLabel: "Visit talentxo.com ↗",
   },
+  {
+    num: "03",
+    tag: "Fintech / Wealth Tech",
+    title: "Altiore — 360 One Wealth",
+    description:
+      "An enterprise wealth management platform for 360 One Wealth — aggregating, analysing, and advising on investment portfolios for HNI clients. Built as a high-performance React SPA with real-time data dashboards, complex financial workflows, and a PWA-ready architecture.",
+    stack: ["React.js", "TypeScript", "REST APIs", "PWA", "Fintech"],
+    url: "https://altiore.360.one",
+    urlLabel: "Visit altiore.360.one ↗",
+  },
 ];
 
 export default function Projects() {
@@ -34,7 +44,7 @@ export default function Projects() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "1.5px",
           background: "var(--border)",
         }}

@@ -19,7 +19,7 @@ export default function Contact() {
   
     if (res.ok) setSubmitted(true);
   };
-  
+
 
   const contactLinks = [
     {
@@ -73,8 +73,7 @@ export default function Contact() {
               marginBottom: "2rem",
             }}
           >
-            &ldquo;Open to full-stack roles, enterprise consulting, and
-            international opportunities.&rdquo;
+            &ldquo;Open to full-stack roles and enterprise consulting globally — Dubai, UAE, USA, Canada, UK, Germany, Australia, New Zealand &amp; Europe.&rdquo;
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
