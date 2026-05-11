@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: "https://www.rahuljavascript.xyz",
     images: [
       {
-        url: "https://www.rahuljavascript.xyz/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Rahul Kumar | Full Stack Developer",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "Rahul Kumar | Full Stack Developer",
     description:
       "Senior Full Stack Developer with 8+ years in React.js, Next.js, NestJS & GraphQL. Open to Dubai, UAE, USA, Canada, UK, Germany, Australia & Europe.",
-    images: ["https://www.rahuljavascript.xyz/og-image.jpg"],
+    images: ["/og-image.jpg"],
   },
 };
 
